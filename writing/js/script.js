@@ -50,10 +50,13 @@ function paintTable() {
             const tr = document.createElement("tr");
             tr.classList.add(i + 1);
 
+            let t = ob[i].todo;
+            let d = ob[i].due;
+
             tr.innerHTML = `
                 <th scope="row">${i + 1}</th>
-                <td class="todo">${ob[i].todo}</td>
-                <td class="due">${ob[i].due}</td>
+                <td class="todo">${t}</td>
+                <td class="due">${d}</td>
                 <td class="btn ${i + 1}"><button type="button" class="btn btn-danger">Delete</button></td>
             `;
 
